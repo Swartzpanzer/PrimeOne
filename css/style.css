@@ -53,142 +53,187 @@ body{
 	padding: 0 15px;
 
 }
-/*@media (max-width: 1200px){
-	.container{
-		max-width: 970px;
-	}
-}
-@media (max-width: 992px){
-	.container{
-		max-width: 750px;
-	}
-}
-@media (max-width: 767px){
-	.container{
-		max-width: none;
-	}
-}	*/
+/*=====================================*/
 .header{
-	padding: 23px 0;
+	margin: 29px 0 33px 0;
 }
-.header__top{
+.header-top{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	padding: 15px 0 0 0;
+}
+.header-top-lang{
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
 }
-.header__lang{
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	width: 50%;
-	justify-content: flex-start;
-}
-.header__lang a{
-	margin: 0 10px;
+.header-top-lang__item{
+	display: block;
+	line-height: 19px;
+	color: #000;
+	text-transform: uppercase;
 	font-family: Bebas;
-	font-size: 10px;
-	line-height: 25px;
-	text-transform: uppercase;
+	font-size: 14px;
 	letter-spacing: 1px;
-	text-decoration: underline;
 	padding: 0 4px;
-	color: black;
+	margin: 0 10px 0 0;
 }
-.header__lang a.active{
-	background: #000;
+.header-top-lang__item.active{
 	color: #fff;
+	background: #000;
 }
-.header__top__link{
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	width: 50%;
-	justify-content: flex-end;
-}
-.header__top__link a{
-	color: #000000;
-	font-family: "AkzidenzGroteskBQBdCnd";
-	font-size: 15px;
-	line-height: 25px;
-	text-transform: uppercase;
+.header-top__link{
 	text-decoration: underline;
+	font-size: 15px;
+	color: #000;
+	text-transform: uppercase;
+	font-family: AkzidenzGroteskBQBdCnd;
+	position: relative;
+	z-index: 11;
 }
-.header__bottom{
+.header-bottom{
+	margin: -10px 0 0 0;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	width: 100%;
-	margin: -20px 0 0 0;
-}
-.left__menu{
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	width: 33.333%;
-	justify-content: center;
 	-ms-align-items: center;
 	align-items: center;
 }
-.menu__list{
+.header-bottom__column{
+	flex: 0 0 33.333%;
+}
+
+.header-bottom-menu__list{
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	font-family: "AkzidenzGroteskBQBdCnd";
-	font-size: 15px;
+	justify-content: space-between;
 }
-.menu__link a{
-	color: #000000;
-	line-height: 25px;
+
+.header-bottom-menu__link{
+	color: #000;
+	font-family: AkzidenzGroteskBQBdCnd;
+	font-size: 15px;
 	text-transform: uppercase;
 	letter-spacing: 1.5px;
-	margin: 0 19px;
 }
-.menu__logo{
+.header-logo{
+	display: block;
 	text-align: center;
-	width: 33.333%;
-	justify-content: center;
-	-ms-align-items: center;
-	align-items: center;
+	position: relative;
+	z-index: 11;
 }
-.menu__logo__text.top{
-	color: #000000;
+.header-logo__text{
+	color: #000;
 	font-family: Bebas;
-	font-size: 8px;
-	line-height: 25px;
+	font-size: 10px;
 	text-transform: uppercase;
 	letter-spacing: 8px;
+	display: block;
 }
-.menu__logo__text{
-	color: #000000;
-	font-family: Bebas;
-	font-size: 8px;
-	line-height: 25px;
-	text-transform: uppercase;
-	letter-spacing: 2.72px;
+.header-logo__image{
+	display: inline-block;
+	margin: 13px 0 22px 0;
 }
-.right__menu{
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	width: 33.333%;
-	justify-content: center;
-	-ms-align-items: center;
-	align-items: center;
+.header-menu__icon{
+	display: none;
 }
+@media (max-width: 768px){
+	.header-menu__icon{
+		display: block;
+		position: absolute;
+		top: 18px;
+		left: 12px;
+		width:30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 5;
+	}
+	.header-menu__icon span{
+		top: 8px;
+		left: 0px;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		background-color: #000;
+	}
+	.header-menu__icon span:first-child{
+		top: 0px;
+	}
+	.header-menu__icon span:last-child{
+		top: auto;
+		bottom: 0px;
+	}
+	.header-menu{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		left: -120%;
+		top: 0;
+		background: #fff;
+		padding: 60px 10px 10px 20px;
+	}
+	.header-menu .active{
+		left: 0;
+	}
+	.header-top-lang{
+		position: absolute;
+		top: 70px;
+		left: 20px;
+	}
+	.header-bottom-menu__list{
+		display: block;
+		text-align: left;
+		margin: 55px 0 0 0;
+	}
+	.header-bottom-menu__list li{
+		margin: 0 0 55px 0;
+	}
+	.header-logo__image{
+		margin: 2px 0 5px 0;
+	}
+	.header-logo__image img{
+		width: 150px;
+	}
+	.header-logo__text{
+		font-size: 8px;
+	}
+	.header-top{
+		justify-content: flex-end;
+	}
+	.header{
+		margin: 5px 0 5px 0; 
+	}
+	.header-bottom{
+		margin: -27px 0 0 0;
+	}
+}
+@media (max-width: 480px){
+	.header-logo__image{
+		margin: 0 0 2px 0;
+	}
+	.header-logo__image img{
+		width: 100px;
+	}
+	.header-top__link{
+		font-size: 12px;
+	}
+	.header-logo__text{
+		letter-spacing: 5px;
+	}
+}
+/*=====================================*/
 .content{
 	flex: 1 1 auto;
 }
@@ -201,12 +246,9 @@ body{
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	width: 100%;
-	height: 100%;
-
 }
 .private__image{
-	width: 50%;
+	flex: 0 0 50%;
 	position: relative;
 }
 .private__image img{
@@ -215,21 +257,18 @@ body{
 	object-fit: cover;
 	position: absolute;
 }
-
-.private__item{
+.private__body{
 	background: #000;
-	width: 50%;
-
+	flex: 0 0 50%;
+	width: 100%;
+	height: 100%;
 }
-
-.private__text-container {
-	padding: 40px;
+.private__item{
+	padding: 75px 0 75px 60px;
 }
-
-.private__item div{
-
+.private__item__content{
+	min-width: 305px;
 }
-
 .private__title{
 	color: #ffffff;
 	font-family: "AkzidenzGroteskBQBdCnd";
@@ -237,22 +276,19 @@ body{
 	line-height: 50px;
 	text-transform: uppercase;
 	letter-spacing: 5px;
-	max-width: 200px;
-	/* padding: 10% 0 0 10%; */
+	margin: 0 0 40px 20px;
 }
 .private__text{
 	color: #ffffff;
 	font-size: 20px;
 	line-height: 25px;
-	margin-top: 5%;
-	/* padding: 5% 0 0 10%; */
+	margin: 0 0 40px 20px;
 }
 .private__button{
 	display: inline-block;
 	height: 50px;
-	margin-top: 5%;
 	text-align: center;
-	/* padding: 5% 0 10% 10%; */
+	margin: 0 0 0 20px;
 }
 
 .private__button p{
@@ -278,7 +314,7 @@ body{
 	.private__image{
 		display: none;
 	}
-	.private__item{
+	.private__body{
 		display: flex;
 		-webkit-flex-direction: column;
 		-moz-flex-direction: column;
@@ -289,30 +325,46 @@ body{
 		-ms-align-items: center;
 		align-items: center;
 		text-align: center;
-		min-width: 100%;
+
 		background: #000;
-		min-height: 450px;
-	}
-	.private__item div{
-		margin: 20px 0 0 0;
 	}
 	.private__item a{
-		margin: 30px 0 0 0;
+		margin: 20px 0 0 0;
 	}
 	.private__title{
-		padding: 0;
+		margin: -30px 0 10px 0;
+		font-size: 40px;
 	}
 	.private__text{
-		padding: 0;
+		margin: 0 0 0 0;
+		font-size: 18px;
+		text-align: center;
 	}
-	.private__button{
-		padding: 0;
+	.private__item{
+		padding: 45px 0 25px 0;
+   }
+}
+@media (max-width:480px){
+	.private__title{
+		font-size: 24px;
+		line-height: 25px;
+	}
+	.private__text{
+		font-size: 12px;
+		text-align: center;
+		line-height: 14px;
+	}
+	.private__item p{
+		font-size: 10px;
+		line-height: 8px;
+	}
+	.private__item{
+		padding: 45px 0 0 0;
 	}
 }
-
-
+/*=====================================*/
 .info-columns{
-	padding: 75px 0;
+	margin: 75px 0;
 	background: #ffffff;
 }
 .columns__row{
@@ -321,7 +373,6 @@ body{
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	flex: 0 1 100%;
 }
 .columns{
 	display: -webkit-flex;
@@ -337,14 +388,15 @@ body{
 	justify-content: space-between;
 	-ms-align-items: flex-start;
 	align-items: flex-start;
-	flex: 0 1 25%;
+	flex: 0 0 25%;
 }
 .columns__image{
 	width: 100%;
 }
 .columns__image img{
-	width: 90%;
+	width: 100%;
 	border-radius: 20px;
+	padding: 0 1px;
 }
 .columns__title{
 	color: #000000;
@@ -365,10 +417,11 @@ body{
 }
 .info-columns__button{
 	display: block;
-	width: 90%;
+	width: 100%;
 	height: 50px;
 	text-align: center;
 	margin: 0 0 10px 0;
+	padding: 0 1px;
 }
 
 .info-columns__button p{
@@ -395,11 +448,11 @@ body{
 		flex-wrap: wrap;
 	}
 	.columns{
-		flex: 0 1 50%;
+		flex: 0 0 50%;
 		margin: 0 0 20px 0;
 	}
 	.columns__image{
-		width: 90%;
+		width: 100%;
 	}
 	.columns__image img{
 		width: 100%;
@@ -407,7 +460,7 @@ body{
 	.columns__title{
 		text-align: center;
 		font-size: 35px;
-		max-width: 90%;
+		max-width: 100%;
 	}
 	.columns__text{
 		font-size: 22px;
@@ -531,7 +584,7 @@ body{
 	justify-content: center;
 }
 .choose-column__image img{
-
+	
 }
 .choose-column{
 	display: -webkit-flex;
