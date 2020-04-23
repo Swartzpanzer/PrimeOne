@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 	<meta name="viewport" content="width=device-width">
 	<title>Document</title>
 </head>
@@ -85,52 +86,71 @@
 				</div>
 			</div>
 			<div class="info-columns">
-				<div class="container">
-					<div class="columns__row">
-						<div class="columns">
-							<div class="columns__image">
-								<img src="image/column1.jpg" alt="">
-							</div>
-							<div class="columns__title">Corporate
-							catering</div>
-							<div class="columns__text">We are able to serve events from 2 to 2000 guests and always reasonable prices.</div>
-							
-							<a href="" class="info-columns__button"><p>Get a quote</p></a>
-							<a href="" class="info-columns__button"><p>View menus</p></a>	
-							
+				<!-- <div class="columns__row"> -->
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><div class="columns">
+								<div class="columns__item">
+									<div class="columns__image">
+										<img src="image/column1.jpg" alt="">
+									</div>
+									<div class="columns__title">Corporate
+									catering</div>
+									<div class="columns__text">We are able to serve events from 2 to 2000 guests and always reasonable prices.</div>
+									
+									<a href="" class="info-columns__button"><p>Get a quote</p></a>
+									<a href="" class="info-columns__button"><p>View menus</p></a>
+								</div>						
+							</div></div>
+							<div class="swiper-slide"><div class="columns">
+								<div class="columns__item">
+									<div class="columns__image">
+										<img src="image/columns2.jpg" alt="">
+									</div>
+									<div class="columns__title">Private
+									catering</div>
+									<div class="columns__text">Fresh, seasonal and simple
+									cuisine. Food is our business and our passion.</div>
+									<a href="" class="info-columns__button"><p>Get a quote</p></a>
+									<a href="" class="info-columns__button"><p>View menus</p></a>
+								</div>
+							</div></div>
+							<div class="swiper-slide"><div class="columns">
+								<div class="columns__item">
+									<div class="columns__image">
+										<img src="image/columns3.png" alt="">
+									</div>
+									<div class="columns__title">Wedding caterin</div>
+									<div class="columns__text">We use only the best organic  ingredients and gluten and dairy free cooking.</div>
+									<a href="" class="info-columns__button"><p>Get a quote</p></a>
+									<a href="" class="info-columns__button"><p>View menus</p></a>
+								</div>
+							</div></div>
+							<div class="swiper-slide"><div class="columns">
+								<div class="columns__item">
+									<div class="columns__image">
+										<img src="image/columns4.png" alt="">
+									</div>
+									<div class="columns__title">Online Ordering</div>
+									<div class="columns__text">Successful catering is about organisation, high quality
+									service, and great food.</div>
+									<a href="" class="info-columns__button"><p>Get a quote</p></a>
+									<a href="" class="info-columns__button"><p>View menus</p></a>
+								</div>
+							</div></div>
 						</div>
-						<div class="columns">
-							<div class="columns__image">
-								<img src="image/columns2.jpg" alt="">
-							</div>
-							<div class="columns__title">Private
-							catering</div>
-							<div class="columns__text">Fresh, seasonal and simple
-							cuisine. Food is our business and our passion.</div>
-							<a href="" class="info-columns__button"><p>Get a quote</p></a>
-							<a href="" class="info-columns__button"><p>View menus</p></a>
-						</div>
-						<div class="columns">
-							<div class="columns__image">
-								<img src="image/columns3.png" alt="">
-							</div>
-							<div class="columns__title">Wedding caterin</div>
-							<div class="columns__text">We use only the best organic  ingredients and gluten and dairy free cooking.</div>
-							<a href="" class="info-columns__button"><p>Get a quote</p></a>
-							<a href="" class="info-columns__button"><p>View menus</p></a>
-						</div>
-						<div class="columns">
-							<div class="columns__image">
-								<img src="image/columns4.png" alt="">
-							</div>
-							<div class="columns__title">Online Ordering</div>
-							<div class="columns__text">Successful catering is about organisation, high quality
-							service, and great food.</div>
-							<a href="" class="info-columns__button"><p>Get a quote</p></a>
-							<a href="" class="info-columns__button"><p>View menus</p></a>
-						</div>
+							 <!-- If we need pagination -->
+						    <div class="swiper-pagination"></div>
+
+						    <!-- If we need navigation buttons -->
+						    <div class="swiper-button-prev"></div>
+						    <div class="swiper-button-next"></div>
+
+						    <!-- If we need scrollbar -->
+						    <div class="swiper-scrollbar"></div>
+						
 					</div>
-				</div>
+				<!-- </div> -->
 			</div>
 			<div class="choose">
 				<div class="choose__row">
@@ -150,7 +170,7 @@
 								</div>
 								<div class="choose-column__item">
 									<div class="choose-column__title">Always fresh</div>
-									<div class="choose-column__text">Fresh, seasonal and simple cuisine. Food is our business and our passion.</div>
+									<div class="choose-column__text">Fresh, seasonal and simple cuisine. Food is our business and our passion. </div>
 								</div>
 							</div>
 							<div class="choose-column">
@@ -250,7 +270,8 @@
 		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="js/java.js">
+	<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+	<script src="js/script.js">
 	</script>
 </body>
 </html>
